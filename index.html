@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=========== REMIXICON LINK ===========-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--=========== BOOTSTRAP CSS ===========-->
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <!--=========== MAIN CSS ===========-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Mini Project-1</title>
+  </head>
+  <body>
+    <!--=========== HEADER - NAV ===========-->
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <div class="container">
+        <img src="assets/images/logo.png" alt="" class="nav_logo img-fluid" />
+
+        <div
+          class="icon_container order-2 order-lg-3 d-flex align-items-center"
+        >
+          <div
+            class="navbar-toggler d-flex justify-content-around d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav_menu"
+          >
+            <i class="ri-menu-line" id="nav_toggle"></i>
+          </div>
+          <div class="d-flex justify-content-around">
+            <i class="ri-shopping-cart-line" id="nav_shop"></i>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse order-3 order-md-2" id="nav_menu">
+          <ul class="navbar-nav ms-auto" id="nav_list">
+            <li class="nav_item px-4 py-md-3">
+              <a href="#home" class="nav_link fw-bold">Home</a>
+            </li>
+            <li class="nav_item px-4 py-md-3">
+              <a href="#feature" class="nav_link fw-bold">Feature</a>
+            </li>
+            <li class="nav_item px-4 py-md-3">
+              <a href="#about" class="nav_link fw-bold">About Us</a>
+            </li>
+            <li class="nav_item px-4 py-md-3">
+              <a href="#shop" class="nav_link fw-bold">Shop</a>
+            </li>
+            <li class="nav_item px-4 py-md-3">
+              <a href="#subscribe" class="nav_link fw-bold">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--=========== HOME ===========-->
+    <section class="home p-5 text-center" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-left d-flex flex-column">
+            <h1 class="text-center pb-4">
+              Curated by
+              <span class="highlight"> Maria</span>
+            </h1>
+            <h6 class="text-center pb-4">
+              Classic over trends women's tops<br />Handpicked
+            </h6>
+            <button class="btn mb-4" type="button">
+              <span>Explore more</span>
+            </button>
+          </div>
+
+          <!-- CAROUSEL IMAGE -->
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <div
+              id="imageCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active carousel_card">
+                  <img
+                    src="assets/images/home1.jpg"
+                    class="d-block w-100 img-fluid"
+                    alt="Image 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/images/home2.jpg"
+                    class="d-block w-100 img-fluid"
+                    alt="Image 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/images/home3.jpg"
+                    class="d-block w-100 img-fluid"
+                    alt="Image 3"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#imageCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#imageCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=========== FEATURE ===========-->
+    <section class="feature p-5 text-center" id="feature">
+      <div class="container">
+        <h3>FEATURED</h3>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+          <div class="col">
+            <div class="card feature_card">
+              <div class="item_sale">Sale</div>
+              <img src="assets/images/home1.jpg" class="feature_img" alt="" />
+              <div
+                class="row row-cols-md-1 row-cols-lg-2 py-3 justify-content-around align-items-center"
+              >
+                <div class="col d-flex flex-column">
+                  <span class="item_name mb-2">ITEM NAME</span>
+                  <span class="item_price mb-2">PHP price</span>
+                </div>
+                <div class="feature_btn col">
+                  <a href="#">Add to cart</a>
+                  <i class="ri-shopping-cart-line button_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card feature_card">
+              <div class="item_sale">Sale</div>
+              <img src="assets/images/home1.jpg" class="feature_img" alt="" />
+              <div
+                class="row row-cols-md-1 row-cols-lg-2 py-3 justify-content-around align-items-center"
+              >
+                <div class="col d-flex flex-column">
+                  <span class="item_name mb-2">ITEM NAME</span>
+                  <span class="item_price mb-2">PHP price</span>
+                </div>
+                <div class="feature_btn">
+                  <a href="#">Add to cart</a>
+                  <i class="ri-shopping-cart-line button_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card feature_card">
+              <div class="item_sale">Sale</div>
+              <img src="assets/images/home1.jpg" class="feature_img" alt="" />
+              <div
+                class="row row-cols-md-1 row-cols-lg-2 py-3 justify-content-around align-items-center"
+              >
+                <div class="col d-flex flex-column">
+                  <span class="item_name mb-2">ITEM NAME</span>
+                  <span class="item_price mb-2">PHP price</span>
+                </div>
+                <div class="feature_btn">
+                  <a href="#">Add to cart</a>
+                  <i class="ri-shopping-cart-line button_icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--=========== OFFER/DISCOUNT ===========-->
+      <div class="container py-3" id="offer">
+        <div class="row flex-row justify-content-center align-items-center">
+          <div class="col-5">
+            <h3 class="offer_title">discount</h3>
+            <p class="offer_desc">description offer</p>
+            <a href="#" class="offer_button">Shop Now</a>
+          </div>
+          <img src="assets/images/temp1.png" alt="" class="offer_img" />
+        </div>
+      </div>
+
+      <!--=========== NEW COLELCTIONS ===========-->
+      <div class="new container" id="new">
+        <h3 class="py-5">NEW COLLECTIONS</h3>
+
+        <div class="container text-center">
+          <div class="row row-cols-1 row-cols-md-2 justify-content-center">
+            <div
+              class="col mb-2 d-flex flex-column justify-content-center align-items-center"
+              id="new_item"
+            >
+              <img src="assets/images/temp1.png" width="400px" alt="" />
+              <span class="">image 1</span>
+            </div>
+            <div class="col d-flex flex-column justify-content-around">
+              <div class="row row-cols-1 row-cols-sm-2 justify-content-center">
+                <div class="card col-6 border-0 m-1 m-md-3" id="item_card">
+                  <img src="assets/images/temp1.png" class="item" alt="" />
+                  <div class="overlay_box">
+                    <a href="#" class="new_button">image 2</a>
+                  </div>
+                </div>
+                <div class="card col-6 border-0 m-1 m-md-3" id="item_card">
+                  <img src="assets/images/temp1.png" alt="" />
+                  <div class="overlay_box">
+                    <a href="#" class="new_button">image 2</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-cols-1 row-cols-sm-2 justify-content-center">
+                <div class="card col-5 border-0 m-1 m-md-3" id="item_card">
+                  <img src="assets/images/temp1.png" alt="" />
+                  <div class="overlay_box">
+                    <a href="#" class="new_button">image 2</a>
+                  </div>
+                </div>
+                <div class="card col-5 border-0 m-1 m-md-3" id="item_card">
+                  <img src="assets/images/temp1.png" alt="" />
+                  <div class="overlay_box">
+                    <a href="#" class="new_button">image 2</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=========== ABOUT ===========-->
+    <section class="about p-5" id="about">
+      <div class="container">
+        <h4 class="mb-4 text-center" id="about_title">About Us</h4>
+        <div class="row row-cols-1 row-cols-md-2 align-items-center">
+          <ariticle class="col text-center">
+            <h6>Behind the Curated</h6>
+            <img src="assets/images/about_img-temp.jpg" width="60%" alt="" />
+          </ariticle>
+          <ariticle class="col">
+            <p class="text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              explicabo earum iure similique unde ullam atque totam molestiae et
+              magnam quaerat libero, harum laborum incidunt labore, tenetur
+              dolorum? Vel maxime quasi aliquid! Facilis saepe numquam
+              voluptatum eum quisquam, dignissimos fuga repudiandae, praesentium
+              assumenda corrupti molestiae dicta tempore vero, nisi itaque.
+            </p>
+          </ariticle>
+        </div>
+      </div>
+    </section>
+
+    <!--=========== SUBSCRIBE ===========-->
+    <section class="subscribe p-5 text-center" id="service">
+      <div class="container">
+        <h5>NEWSLETTER</h5>
+
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div
+          class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center"
+          id="newsletter"
+        >
+          <div class="col">
+            <p class="newsletter_text">
+              Subscribe and Get the latest news on our collections
+            </p>
+            <span class="newsletter_subtext">
+              Get daily updates with our collections
+            </span>
+          </div>
+          <div class="col">
+            <form action="submit" id="newsletter_input">
+              <input
+                class="email"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button class="button" type="button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="borderline"></div>
+    <!--=========== FOOTER ===========-->
+    <footer class="footer p-5 text-center">
+      <div class="container">
+        <div class="row" id="footer_container">
+          <div class="col-4" id="footer_box">
+            <img
+              src="assets/images/logo.png"
+              alt=""
+              class="footer_logo img-fluid"
+            />
+            <p class="footer_desc">New vintage women's tops 2023</p>
+          </div>
+          <div class="col-2" id="footer_box">
+            <h3 class="footer_title">EXPLORE</h3>
+            <ul class="footer_list">
+              <li><a href="#home" class="footer_link">Home</a></li>
+              <li><a href="#featured" class="footer_link">Featured</a></li>
+              <li><a href="#about" class="footer_link">About Us</a></li>
+              <li><a href="#" class="footer_link">Shop</a></li>
+            </ul>
+          </div>
+          <div class="col-2" id="footer_box">
+            <h3 class="footer_title">SUPPORT</h3>
+            <ul class="footer_list">
+              <li><a href="#home" class="footer_link">Product Help</a></li>
+              <li><a href="#feature" class="footer_link">Customer Care</a></li>
+              <li>
+                <a href="#subscribe" class="footer_link">Authorized Service</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-2 social_box">
+            <a href="#" class="footer_social">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#" class="footer_social">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="#" class="footer_social">
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="#" class="footer_social">
+              <i class="ri-google-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="footer_rights">
+          &#169; 2023 Curated by Maria. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+
+  <!--=========== BOOTSTRAP JS ===========-->
+  <script src="assets/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <!--=========== MAIN JS ===========-->
+  <script src="script.js"></script>
+</html>
