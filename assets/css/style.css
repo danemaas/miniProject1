@@ -23,6 +23,7 @@
 }
 
 body {
+    height: 100vh;
     color: var(--secondary-color-text);
     font-family: var(--body-font);
 }
@@ -420,6 +421,10 @@ input, button {
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
+}
+
+.shop {
+    padding: 10rem;
 }
 
 /* MANUAL MEDIA QUERIES */
