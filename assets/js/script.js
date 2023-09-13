@@ -1,3 +1,4 @@
+// ===== CARD HOVER EFFECT =====
 const cards = document.querySelectorAll('.product-box');
 
 [...cards].forEach( (card) => {

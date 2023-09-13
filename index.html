@@ -34,26 +34,31 @@
           >
             <i class="ri-menu-line" id="nav_toggle"></i>
           </div>
-          <div class="d-flex justify-content-around">
+          <div class="shop-icon_container d-flex justify-content-around">
             <i class="ri-shopping-cart-line" id="nav_shop"></i>
+            <span>2</span>
           </div>
         </div>
 
         <div class="collapse navbar-collapse order-3 order-md-2" id="nav_menu">
           <ul class="navbar-nav ms-auto" id="nav_list">
-            <li class="nav_item px-4 py-md-3">
+            <li
+              class="nav_item px-4 py-3 py-md-3"
+              data-toggle="collapse"
+              data-target="#nav_menu"
+            >
               <a href="#home" class="nav_link fw-bold">Home</a>
             </li>
-            <li class="nav_item px-4 py-md-3">
+            <li class="nav_item px-4 py-3 py-md-3">
               <a href="#feature" class="nav_link fw-bold">Feature</a>
             </li>
-            <li class="nav_item px-4 py-md-3">
+            <li class="nav_item px-4 py-3 py-md-3">
               <a href="#about" class="nav_link fw-bold">About Us</a>
             </li>
-            <li class="nav_item px-4 py-md-3">
+            <li class="nav_item px-4 py-3 py-md-3">
               <a href="#shop" class="nav_link fw-bold">Shop</a>
             </li>
-            <li class="nav_item px-4 py-md-3">
+            <li class="nav_item px-4 py-3 py-md-3">
               <a href="#subscribe" class="nav_link fw-bold">Subscribe</a>
             </li>
           </ul>
@@ -293,67 +298,66 @@
       </div>
 
       <!--=========== OFFER/DISCOUNT ===========-->
-      <div class="container" id="offer">
+      <div class="container banner">
         <div class="row flex-row justify-content-center align-items-center">
-          <div class="col-5">
-            <h3 class="offer_title">discount</h3>
+          <div class="order-2 order-lg-1 col-5">
+            <h3 class="offer_title">Discount Offers</h3>
             <p class="offer_desc">description offer</p>
-            <a href="#" class="btn"> <span>Shop Now</span></a>
+            <a href="#" class="btn offer_btn"> <span>Shop Now</span></a>
           </div>
-          <img src="assets/images/discount_img.png" alt="" class="offer_img" />
+          <img
+            src="assets/images/discount_img.png"
+            alt=""
+            class="order-1 order-lg-2"
+          />
         </div>
       </div>
 
       <!--=========== NEW COLELCTIONS ===========-->
-      <div class="new container" id="new">
-        <h3 class="py-5">NEW COLLECTIONS</h3>
+      <div class="new container text-center" id="new">
+        <h3 class="pt-5">NEW COLLECTIONS</h3>
 
-        <div class="container text-center">
-          <div class="row row-cols-1 justify-content-center">
-            <div
-              class="col mb-2 d-flex flex-row justify-content-center align-items-center"
-              id="new_item"
-            >
-              <img src="assets/images/new_item_main.png" width="400px" alt="" />
-              <div class="col-5">
-                <h3 class="new_item_title">New Items</h3>
-                <p class="new_item_desc">description</p>
-                <a href="#" class="btn"> <span>Shop Now</span></a>
+        <div
+          class="banner row flex-row justify-content-center align-items-center"
+        >
+          <img src="assets/images/new_item_main.png" alt="" />
+          <div class="col-5">
+            <h3 class="offer_title">New Items</h3>
+            <p class="offer_desc">description offer</p>
+            <a href="#" class="btn offer_btn"> <span>Shop Now</span></a>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 my-5">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <div class="card border-0" id="item_card">
+              <img src="assets/images/new_item1.png" class="item" alt="" />
+              <div class="overlay_box">
+                <a href="#" class="new_button">Shop now</a>
               </div>
             </div>
           </div>
-
-          <div class="row row-cols-1 row-cols-sm-2 my-5">
-            <div class="col-md-4 col-lg-3 mb-3">
-              <div class="card border-0" id="item_card">
-                <img src="assets/images/new_item1.png" class="item" alt="" />
-                <div class="overlay_box">
-                  <a href="#" class="new_button">Shop now</a>
-                </div>
+          <div class="col-md-4 col-lg-3 mb-3">
+            <div class="card border-0" id="item_card">
+              <img src="assets/images/new_item2.png" alt="" />
+              <div class="overlay_box">
+                <a href="#" class="new_button">Shop now</a>
               </div>
             </div>
-            <div class="col-md-4 col-lg-3 mb-3">
-              <div class="card border-0" id="item_card">
-                <img src="assets/images/new_item2.png" alt="" />
-                <div class="overlay_box">
-                  <a href="#" class="new_button">Shop now</a>
-                </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-3">
+            <div class="card border-0" id="item_card">
+              <img src="assets/images/new_item3.png" alt="" />
+              <div class="overlay_box">
+                <a href="#" class="new_button">Shop now</a>
               </div>
             </div>
-            <div class="col-md-4 col-lg-3 mb-3">
-              <div class="card border-0" id="item_card">
-                <img src="assets/images/new_item3.png" alt="" />
-                <div class="overlay_box">
-                  <a href="#" class="new_button">Shop now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-lg-3 mb-3">
-              <div class="card border-0" id="item_card">
-                <img src="assets/images/new_item4.png" alt="" />
-                <div class="overlay_box">
-                  <a href="#" class="new_button">Shop now</a>
-                </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-3">
+            <div class="card border-0" id="item_card">
+              <img src="assets/images/new_item4.png" alt="" />
+              <div class="overlay_box">
+                <a href="#" class="new_button">Shop now</a>
               </div>
             </div>
           </div>
@@ -368,10 +372,14 @@
         <div class="row row-cols-1 row-cols-md-2 align-items-center">
           <ariticle class="col text-center">
             <h6>Maria Isabel Emaas Bonot</h6>
-            <img src="assets/images/about_img-temp.jpg" width="60%" alt="" />
+            <img
+              src="assets/images/about_img-temp.jpg"
+              class="about_img img-fluid"
+              alt=""
+            />
           </ariticle>
-          <ariticle class="col">
-            <p class="text-left">
+          <ariticle class="col p-5">
+            <p class="about_text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
               explicabo earum iure similique unde ullam atque totam molestiae et
               magnam quaerat libero, harum laborum incidunt labore, tenetur
@@ -385,7 +393,7 @@
     </section>
 
     <!--=========== SUBSCRIBE ===========-->
-    <section class="subscribe p-5 text-center" id="service">
+    <section class="subscribe p-5 text-center" id="subscribe">
       <div class="container">
         <h5 class="my-5">NEWSLETTER</h5>
 
@@ -405,7 +413,7 @@
               Get daily updates with our collections
             </span>
           </div>
-          <div class="col">
+          <div class="col pt-4 pt-md-0">
             <form action="submit" id="newsletter_input">
               <input
                 class="email"
@@ -423,8 +431,11 @@
     <!--=========== FOOTER ===========-->
     <footer class="footer p-5">
       <div class="container">
-        <div class="row" id="footer_container">
-          <div class="col-4" id="footer_box">
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-4"
+          id="footer_container"
+        >
+          <div class="col" id="footer_box">
             <img
               src="assets/images/logo.png"
               alt=""
@@ -432,7 +443,7 @@
             />
             <p class="footer_desc text-center">New vintage women's tops 2023</p>
           </div>
-          <div class="col-2" id="footer_box">
+          <div class="col" id="footer_box">
             <h3 class="footer_title">EXPLORE</h3>
             <ul class="footer_list">
               <li><a href="#home" class="footer_link">Home</a></li>
@@ -441,7 +452,7 @@
               <li><a href="#" class="footer_link">Shop</a></li>
             </ul>
           </div>
-          <div class="col-2" id="footer_box">
+          <div class="col" id="footer_box">
             <h3 class="footer_title">SUPPORT</h3>
             <ul class="footer_list">
               <li><a href="#home" class="footer_link">Product Help</a></li>
@@ -451,7 +462,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-2 social_box">
+          <div class="col social_box">
             <a href="#" class="footer_social">
               <i class="ri-facebook-fill"></i>
             </a>
