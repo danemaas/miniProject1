@@ -460,20 +460,27 @@ input, button {
 
 .tag a {
     border-bottom: 2px solid transparent;
-    transition: .4s;
+    width: 0;
+    transition: .3s;
 }
 
-.tag:hover a {
-    color: var(--secondary-color-title);
+.tag:is(:first-child) {
     border-bottom: 2px solid var(--secondary-color-title);
 }
 
+.tag:not(:first-child):hover a {
+    width: 100%;
+    color: var(--secondary-color-title);
+    border-bottom: 2px solid var(--secondary-color-title);
+    
+}
+
 /*=============== SHOP #PAGE ===============*/
-.sneaker_pages {
+.shop_pages {
     flex-direction: row;
 }
 
-.sneaker_page {
+.shop_page {
     font-size: .85rem;
     font-weight: 600;
     border: 2px solid black;
@@ -481,7 +488,7 @@ input, button {
     cursor: pointer;
 }
 
-.sneaker_page:is(:first-child) {
+.shop_page:is(:first-child) {
     background-color: var(--accent-color);
 }
 
