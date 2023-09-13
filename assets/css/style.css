@@ -204,13 +204,17 @@ input, button {
                 opacity .2s ease-in-out;
 }
 
+.product-inner-box .icons i {
+    font-weight: 600;
+    color: var(--card-bg-color);
+}
+
 .product-inner-box .icons a {
-    width: 40px;
-    height: 40px;
+    padding-inline: .3rem;
     display: flex;
     justify-content: center;
     border-radius: 50%;
-    background: transparent;
+    background: var(--accent-color);
 }
 
 .product-inner-box .onsale .badge {
@@ -491,6 +495,8 @@ input, button {
 .shop_page:is(:first-child) {
     background-color: var(--accent-color);
 }
+
+/*=============== DROPDOWN LIST ===============*/
 
 /*=============== MEDIA QUERIES ===============*/
 @media screen and (max-width: 800px) {
