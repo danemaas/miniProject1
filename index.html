@@ -75,13 +75,14 @@
               Classic over trends women's tops<br />Handpicked
             </h6>
             <button class="btn mb-4" type="button">
-              <span>Explore more</span>
+              <a href="assets/shop.html">Explore more</a>
             </button>
           </div>
 
           <!-- CAROUSEL IMAGE -->
           <div
             class="col-md-6 d-flex justify-content-center align-items-center"
+            id="carousel_container"
           >
             <div
               id="imageCarousel"
@@ -145,6 +146,18 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
+          </div>
+
+          <div class="social_box" id="home_social">
+            <a href="#" class="footer_social">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#" class="footer_social">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="#" class="footer_social">
+              <i class="ri-twitter-fill"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -372,6 +385,7 @@
               src="assets/images/about_img-temp.jpg"
               class="about_img img-fluid"
               alt=""
+              width="400px"
             />
           </ariticle>
           <ariticle class="col p-5">
@@ -415,8 +429,11 @@
                 class="email"
                 type="email"
                 placeholder="Enter your email"
+                required
               />
-              <button class="button" type="button">Subscribe</button>
+              <button href class="button" type="button" value="email">
+                Subscribe
+              </button>
             </form>
           </div>
         </div>

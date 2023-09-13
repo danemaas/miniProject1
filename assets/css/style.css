@@ -51,7 +51,7 @@ input, button {
     transition: .4s;
 }
 
-.btn span {
+.btn span, .btn a {
     color: var(--card-bg-color);
 }
 
@@ -81,7 +81,7 @@ input, button {
 /*=============== NAVBAR ===============*/
 .navbar {
     background-color: var(--dominant-color);
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .nav_logo {
@@ -169,6 +169,10 @@ input, button {
     font-family: var(--logo-font);
     font-weight: 600;
     font-size: 5rem;
+}
+
+#home_social {
+    display: flex;
 }
 
 /*=============== FEATURE ===============*/
@@ -390,13 +394,16 @@ input, button {
     font-weight: 600;
 }
 
+.footer_title:is(:first-child), .footer_list:is(:first-child) {
+    padding-left: 2rem;
+}
+
 .footer_list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     row-gap: 1rem;
-    padding-left: 0;
 }
 
 .footer_list a {
@@ -414,6 +421,16 @@ input, button {
 .social_box i {
     font-size: 1.5rem;
     margin: .6rem;
+    background-color: transparent;
+    padding: .5rem;
+    border-radius: 25rem;
+    color: var(--secondary-color-title);
+    transition: .4s;
+}
+
+.footer_social:hover i {
+    color: var(--card-bg-color);
+    background-color: var(--accent-color);
 }
 
 .footer_rights {
@@ -423,11 +440,52 @@ input, button {
     align-items: baseline;
 }
 
+/*=============== SHOP ===============*/
 .shop {
-    padding: 10rem;
+    padding-block: 10rem;
 }
 
-/* MANUAL MEDIA QUERIES */
+/*=============== TAGS ===============*/
+.tag_list {
+    padding-left: 0;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 20px -20px;
+}
+
+.tag a {
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+
+.tag:hover a {
+    color: var(--secondary-color-title);
+    border-bottom: 2px solid var(--secondary-color-title);
+}
+
+/*=============== SHOP #PAGE ===============*/
+.sneaker_pages {
+    flex-direction: row;
+}
+
+.sneaker_page {
+    font-size: .85rem;
+    font-weight: 600;
+    border: 2px solid black;
+    padding-inline: .5rem;
+    cursor: pointer;
+}
+
+.sneaker_page:is(:first-child) {
+    background-color: var(--accent-color);
+}
+
+/*=============== MEDIA QUERIES ===============*/
 @media screen and (max-width: 800px) {
     .offer_btn {
         margin-bottom: 2rem;
@@ -436,5 +494,17 @@ input, button {
     .about_text {
         font-size: .9rem;
         text-align: justify;
+    }
+
+    #home_social {
+        order: 2;
+        flex-direction: column;
+        width: max-content;
+        position: absolute;
+        z-index: 1000;
+    }
+
+    #carousel_container {
+        order: 3;
     }
 }
