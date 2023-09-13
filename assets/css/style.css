@@ -16,6 +16,12 @@
 }
 
 /*=============== BASE ===============*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: var(--secondary-color-text);
     font-family: var(--body-font);
@@ -98,25 +104,13 @@ input, button {
     background-color: var(--card-bg-color);
 }
 
-.home_img {
-    width: 40%;
-}
-
 .highlight {
     font-family: var(--logo-font);
     font-weight: 600;
     font-size: 5rem;
 }
 
-.carousel_card {
-    width: 100%;
-}
-
-#imageCarousel {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-/*=============== BUTTON ===============*/
+/*=============== BUTTONS ===============*/
 .btn {
     background-color: var(--secondary-color-title);
     width: 150px;
@@ -159,6 +153,103 @@ input, button {
     background-color: var(--dominant-color);
 }
 
+.feature_title {
+    width: 160px;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--secondary-color-title);
+}
+
+.product-box {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+}
+
+.product-inner-box .icons {
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: -3%;
+    opacity: 0;
+    transition: all .2s ease-in-out,
+                tranform .2s ease-in-out, 
+                opacity .2s ease-in-out;
+}
+
+.product-inner-box .icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.product-inner-box .onsale .badge {
+    position: absolute;
+    background: var(--accent-color);
+    font-size: 12px;
+    padding: 5px 14px;
+    top: 0;
+    left: 0;
+}
+
+.product-inner-box .onsale .badge::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    width: 0;
+    border-width: 10px 0 0 10px;
+    border-color: transparent transparent transparent var(--accent-color);
+    border-style: solid;
+}
+
+.product-inner-box .onsale .badge::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 0;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--accent-color) transparent transparent;
+    border-style: solid;
+}
+
+.product-inner-box img {
+    box-shadow: 0 33px 61px -29px #00000042;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+}
+
+.product-box.is-hover .icons {
+    transform: rotateY(-3%);
+    top: 3%;
+    opacity: 1;
+}
+
+.cart-btn {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: all .2s ease-in-out,
+                tranform .2s ease-in-out, 
+                opacity .2s ease-in-out;
+}
+
+.product-box.is-hover .cart-btn {
+    opacity: 1;
+}
+
+.product-name h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 .feature_card {
     position: relative;
     border-radius: 20px;
@@ -167,30 +258,6 @@ input, button {
                 rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
                 rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transition: .3s;
-}
-
-.feature_card:hover {
-    transform: translateY(-.7rem);
-}
-
-.feature_img {
-    border-radius: 20px 20px 0 0;
-}
-
-.item_sale {
-    position: absolute;
-    top: 2rem;
-    left: 2.5rem;
-    font-weight: 600;
-    color: var(--secondary-color-title);
-    background-color: var(--accent-color);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-                rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    padding-inline: .5rem;
-    border-radius: 25px;
 }
 
 #offer {
@@ -212,21 +279,35 @@ input, button {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
                 rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
                 rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    row-gap: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
 }
 
 #item_card {
     position: relative;
     overflow: hidden;
-    width: 250px;
     background-color: var(--card-bg-color);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
                 rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
                 rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 2rem;
+    margin: 0 auto;
 }
 
+.new_button {
+    background: var(--accent-color);
+    padding: .5rem;
+    border-radius: 10px;
+    color: var(--card-bg-color);
+    font-weight: 600;
+    transition: .4s;
+}
+
+.new_button:hover {
+    color: var(--card-bg-color);
+    transform: scale(1.1);
+}
 
 .overlay_box {
     position: absolute;
@@ -245,7 +326,7 @@ input, button {
     bottom: 0;
 }
 
-/*=============== SERVICE ===============*/
+/*=============== SUBSCRIBE ===============*/
 .subscribe {
     background-color: var(--dominant-color);
 }
@@ -326,7 +407,7 @@ input, button {
 
 .footer_list a {
     color: var(--secondary-color-text);
-    font-size: .85rem;
+    font-size: .75rem;
     border-bottom: 2px solid transparent;
     transition: .4s;
 }
