@@ -326,7 +326,9 @@ input, button {
 }
 
 /*=============== ABOUT ===============*/
-
+.about_text {
+    text-align: justify;
+}
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe {
