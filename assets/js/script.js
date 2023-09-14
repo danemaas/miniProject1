@@ -1,3 +1,16 @@
+// ===== SHOPPING BAG SIDEBAR =====
+const bagIcon = document.querySelector('#nav_shop');
+const bag = document.querySelector('.bag');
+const closeIcon = document.querySelector('.close_btn');
+
+bagIcon.onclick = () => {
+    bag.classList.add('active');
+}
+
+closeIcon.onclick = () => {
+    bag.classList.remove('active');
+}
+
 // ===== CARD HOVER EFFECT =====
 const cards = document.querySelectorAll('.product-box');
 

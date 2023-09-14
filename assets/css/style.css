@@ -140,22 +140,118 @@ input, button {
     position: relative;
 }
 
-.shop-icon_container span {
+.shop-icon_container .counter {
     margin: 0;
     position: absolute;
-    font-size: .55rem;
+    font-size: .65rem;
     font-weight: 600;
     top: .1rem;
-    right: .3rem;
-    padding-inline: .1rem;
+    right: -.1rem;
+    padding-inline: .3rem;
     background: var(--accent-color);
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: .3s;
 }
 
 .shop-icon_container:hover span {
     background: var(--secondary-color-text);
     color: var(--card-bg-color);
+}
+
+.bag {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--dominant-color);
+    box-shadow: -2px 0 4px var(--secondary-color-text);
+    z-index: 10000;
+    transition: .4s;
+}
+
+.bag.active {
+    right: 0;
+}
+
+.bag_box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.detail_box {
+    row-gap: .5rem;
+}
+
+.bag_prod-title {
+    font-size: .75rem;
+}
+
+.bag_quantity {
+    border: 1px solid var(--secondary-color-title);
+    width: 2.4rem;
+    text-align: center;
+    font-size: .85rem;
+}
+
+.remove_item {
+    font-size: 1.5rem;
+    color: #f52626c2;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.remove_item:hover {
+    transform: scale(1.1);
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--secondary-color-title);
+}
+
+.total_title, .total_price {
+    font-size: .95rem;
+}
+
+.buy_btn {
+    color: var(--card-bg-color);
+    background-color: var(--secondary-color-title);
+    padding: .5rem 1rem;
+    border-radius: 25rem;
+    display: flex;
+    margin: 2rem auto;
+    transition: .4s;
+}
+
+.buy_btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.close_btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.4rem;
+    background-color: transparent;
+    padding-inline: .45rem;
+    border-radius: 25rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.close_btn:hover {
+    background-color: var(--accent-color);
 }
 
 /*=============== HOME ===============*/
