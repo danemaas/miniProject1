@@ -257,6 +257,7 @@ input, button {
 
 /*=============== HOME ===============*/
 .home {
+    scroll-margin-top: 2rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
     background-color: var(--card-bg-color);
@@ -274,6 +275,7 @@ input, button {
 
 /*=============== FEATURE ===============*/
 .feature {
+    scroll-margin-top: 1rem;
     background-color: var(--dominant-color);
 }
 
@@ -286,7 +288,6 @@ input, button {
 /* FEATURE PRODUCTS CARD */
 .product-box {
     background-color: var(--card-bg-color);
-    border-radius: 10px;
 }
 
 .product-inner-box .icons {
@@ -347,7 +348,6 @@ input, button {
 
 .product-inner-box img {
     box-shadow: 0 33px 61px -29px #00000042;
-    border-radius: 10px 10px 0 0;
     height: 100%;
     width: 100%;
     object-fit:contain;
@@ -422,12 +422,17 @@ input, button {
 }
 
 /*=============== ABOUT ===============*/
+.about {
+    scroll-margin-top: 2rem;
+}
+
 .about_text {
     text-align: justify;
 }
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe {
+    scroll-margin-top: 3rem;
     background-color: var(--dominant-color);
 }
 
