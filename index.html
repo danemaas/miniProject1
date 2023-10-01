@@ -11,8 +11,10 @@
     />
     <!--=========== BOOTSTRAP CSS ===========-->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="assets/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
 
     <!--=========== FAVICON ICON ===========-->
@@ -32,7 +34,7 @@
       <div class="container">
         <img src="assets/images/logo.png" alt="" class="nav_logo img-fluid" />
 
-        <div
+        <section
           class="icon_container order-2 order-lg-3 d-flex align-items-center"
         >
           <div
@@ -42,14 +44,44 @@
           >
             <i class="ri-menu-line" id="nav_toggle"></i>
           </div>
-          <div class="shop-icon_container d-flex justify-content-around">
-            <i class="ri-shopping-bag-line" id="nav_shop"></i>
-            <span class="counter">0</span>
+          <div
+            class="shop-icon_container d-flex justify-content-around align-items-center"
+          >
+            <div class="login-wrapper">
+              <i class="ri-user-line" id="navUser"></i>
+              <!--=========== USER-LOGIN BOX ===========-->
+              <section class="user-login" id="userLogin">
+                <div class="wrapper">
+                  <h2 class="login-title">Sign In</h2>
+                  <form action="#" class="login-form" id="loginForm">
+                    <div class="input-grp">
+                      <input type="email" placeholder="Email" id="email" />
+                    </div>
+                    <div class="input-grp">
+                      <input
+                        type="password"
+                        placeholder="Password"
+                        id="password"
+                      />
+                    </div>
+                    <div class="btn-wrapper">
+                      <button id="loginBtn">Login</button>
+                      <button><a href="#">Register</a></button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </div>
+
+            <div class="wrapper">
+              <i class="ri-shopping-bag-line" id="nav_shop"></i>
+              <span class="counter">0</span>
+            </div>
           </div>
-        </div>
+        </section>
 
         <!--=========== BAG-SIDEBAR ===========-->
-        <div class="bag">
+        <section class="bag">
           <h5 class="bag_title text-center fw-bolder pt-5 pb-3">Your Bag</h5>
           <div class="bag_content">
             <div class="bag_box">
@@ -80,10 +112,13 @@
           <div class="close_btn">
             <i class="ri-close-line"></i>
           </div>
-        </div>
+        </section>
 
         <!--=========== MENUBAR ===========-->
-        <div class="collapse navbar-collapse order-3 order-md-2" id="nav_menu">
+        <section
+          class="collapse navbar-collapse order-3 order-md-2"
+          id="nav_menu"
+        >
           <ul class="navbar-nav ms-auto text-center" id="nav_list">
             <li class="nav_item px-4 py-3 py-md-3">
               <a href="#home" class="nav_link fw-bold">Home</a>
@@ -101,7 +136,7 @@
               <a href="#subscribe" class="nav_link fw-bold">Subscribe</a>
             </li>
           </ul>
-        </div>
+        </section>
       </div>
     </nav>
 
@@ -194,10 +229,18 @@
 
           <!-- SOCIAL ICONS -->
           <div class="social_box" id="home_social">
-            <a href="#" class="footer_social">
+            <a
+              href="https://www.facebook.com/curatedbymariaaa"
+              target="_blank"
+              class="footer_social"
+            >
               <i class="ri-facebook-fill"></i>
             </a>
-            <a href="#" class="footer_social">
+            <a
+              href="https://www.instagram.com/_curatedbymaria/"
+              target="_blank"
+              class="footer_social"
+            >
               <i class="ri-instagram-fill"></i>
             </a>
             <a href="#" class="footer_social">
@@ -496,7 +539,7 @@
             <span class="newsletter_subtext"> Get daily updates from us </span>
           </div>
           <div class="col pt-4 pt-md-0">
-            <form class="input-group" action="submit" id="newsletter_input">
+            <form class="" action="submit" id="newsletter_input">
               <input
                 class="email"
                 type="email"
@@ -566,7 +609,11 @@
   </body>
 
   <!--=========== BOOTSTRAP JS ===========-->
-  <script src="assets/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
   <!--=========== MAIN JS ===========-->
   <script src="assets/js/script.js"></script>
 </html>

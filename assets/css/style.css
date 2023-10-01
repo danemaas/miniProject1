@@ -107,7 +107,7 @@ input, button {
     cursor: pointer;
     font-size: 1.1rem;
     background-color: transparent;
-    padding: .3rem;
+    padding: .5rem;
     border-radius: 25rem;
     font-size: 1.2rem;
     font-weight: 600;
@@ -118,13 +118,28 @@ input, button {
     background-color: var(--accent-color);
 }
 
-#nav_shop {
+.login-wrapper {
+    position: relative;
+}
+
+#navUser {
     background-color: transparent;
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 600;
     padding-inline: .4rem;
     padding-block: .1rem;
+    border-radius: 25rem;
+    transition: .3s;
+}
+
+#nav_shop {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-block: .2rem;
+    padding-inline: .5rem;
     border-radius: 25rem;
     transition: .3s;
 }
@@ -141,7 +156,7 @@ input, button {
     position: relative;
 }
 
-.shop-icon_container .counter {
+.wrapper .counter {
     margin: 0;
     position: absolute;
     font-size: .65rem;
@@ -157,7 +172,7 @@ input, button {
     transition: .3s;
 }
 
-.shop-icon_container:hover span {
+.wrapper:hover .counter {
     background: var(--secondary-color-text);
     color: var(--card-bg-color);
 }
@@ -253,6 +268,99 @@ input, button {
 
 .close_btn:hover {
     background-color: var(--accent-color);
+}
+
+.user-login {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    width: 300px;
+    background-color: var(--dominant-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 2rem;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform .3s ease-in-out;
+}
+
+.user-login::after {
+    position: absolute;
+    content: '';
+    top: 1rem;
+    right: -.91rem;
+    width: 100px;
+    height: 100px;
+    background-color: var(--dominant-color);
+    transform: skewY(-45deg) rotateY(-45deg);
+    z-index: -1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding-block: .5rem;
+    padding-left: 1rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-wrapper button:first-child {
+    padding-block: .3rem;
+    padding-inline: 1rem;
+    background-color: var(--secondary-color-title);
+    color: var(--card-bg-color);
+    border-radius: 10rem;
+    transition: .3s ease-in-out;
+}
+
+.btn-wrapper button:first-child:hover {
+    transform: scale(1.1);
+}
+
+.btn-wrapper button:last-child {
+    padding-block: .3rem;
+    padding-inline: 1rem;
+    background-color: var(--accent-color);
+    border-radius: 10rem;
+    transition: .3s ease-in-out;
+}
+
+.btn-wrapper button:last-child a {
+    color: var(--secondary-color-title);
+}
+
+.btn-wrapper button:last-child:hover {
+    transform: scale(1.1);
+}
+
+.show {
+    transform: scale(1);
+}
+
+.error-msg {
+    padding: 0;
+    margin: 0;
+    color: red;
+    font-size: .7rem;
+    font-style: italic;
+    text-align: left;
 }
 
 /*=============== HOME ===============*/
@@ -571,10 +679,6 @@ input, button {
     transition: .3s;
 }
 
-/* .tag:is(:first-child) {
-    border-bottom: 2px solid var(--secondary-color-title);
-} */
-
 .tag:hover a {
     width: 100%;
     color: var(--secondary-color-title);
@@ -602,6 +706,60 @@ input, button {
     background-color: var(--accent-color);
 }
 
+/*=============== REGISTER PAGE ===============*/
+.registration-section {
+    width: 576px;
+    margin: 0 auto;
+    padding-block: 6rem;
+}
+
+.registration-section .title {
+    border-bottom: 1px solid var(--secondary-color-text);
+    width: max-content;
+    margin-bottom: 2rem;
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.group input {
+    border: 2px solid var(--secondary-color-title);
+    width: 50%;
+    padding-block: .5rem;
+    padding-left: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-group > * {
+    width: 23.5%;
+    padding-block: .5rem;
+}
+
+.btn-group button:last-child {
+    background-color: var(--accent-color);
+    color: var(--secondary-color-title);
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-group button:last-child:hover {
+    transform: scale(1.1);
+}
+
+
 /*=============== DROPDOWN LIST ===============*/
 
 /*=============== SCROLLBAR ===============*/
@@ -626,6 +784,12 @@ input, button {
 }
 
 /*=============== MEDIA QUERIES ===============*/
+@media screen and (min-width: 992px) {
+    .user-login {
+        top: 3.5rem;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .offer_btn {
         margin-bottom: 2rem;
